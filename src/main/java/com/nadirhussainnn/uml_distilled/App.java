@@ -2,6 +2,8 @@ package com.nadirhussainnn.uml_distilled;
 
 import com.nadirhussainnn.specialization.*;
 import com.nadirhussainnn.composition.Building;
+import com.nadirhussainnn.singleton.Singleton;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,6 +44,9 @@ public class App {
     	vehicle2.driveVehicle(); // parent class method is invoked unless we override method in child
     	// vehicle2.showWheels(); This won't work, because 
     	
+    	// Singleton example: We can't create more than one instance of class at single time
+    	Singleton singleInstance = Singleton.getInstance();
+    	singleInstance.showMessage();
     	
     	
     }
